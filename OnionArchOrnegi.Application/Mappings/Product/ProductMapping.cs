@@ -1,4 +1,5 @@
-﻿using OnionArchOrnegi.Application.Product.Commands.Add;
+﻿using OnionArchOrnegi.Application.Features.Product.Queries.GetAll;
+using OnionArchOrnegi.Application.Product.Commands.Add;
 using OnionArchOrnegi.Application.Product.Commands.Update;
 using OnionArchOrnegi.Domain.Entities;
 using System;
@@ -25,19 +26,4 @@ public static class ProductMapping
         return existing;
     }
 
-    //public static ProductListDto ToListDto(this Product entity) =>
-    //    new ProductListDto
-    //    {
-    //        Id = entity.Id,
-    //        Name = entity.Name,
-    //        Price = entity.Price
-    //    };
-
-    //public static ProductGetByIdDto ToGetByIdDto(this Product entity) =>
-    //    new ProductGetByIdDto
-    //    {
-    //        Id = entity.Id,
-    //        Name = entity.Name,
-    //        Price = entity.Price
-    //    };
 }

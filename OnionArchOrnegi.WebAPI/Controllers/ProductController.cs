@@ -1,6 +1,8 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using OnionArchOrnegi.Application.Features.Product.Queries.GetAll;
+using OnionArchOrnegi.Application.Features.Product.Queries.GetById;
 using OnionArchOrnegi.Application.Product.Commands.Add;
 using OnionArchOrnegi.Application.Product.Commands.Delete;
 using OnionArchOrnegi.Application.Product.Commands.Update;
@@ -13,6 +15,16 @@ public class ProductController : ApiControllerBase
 {
     public ProductController(ISender mediatr) : base(mediatr)
     {
+    }
+    [HttpGet]
+    public async Task<IActionResult> GET(CancellationToken cancellationToken)
+    {
+        return Ok(await Mediatr.Send(new GetAllProductQuery(), cancellationToken));
+    }
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GET(int id,CancellationToken cancellationToken)
+    {
+        return Ok(await Mediatr.Send(new GetByIdProductQuery(id), cancellationToken));
     }
     [HttpPost]
     public async Task<IActionResult> POST(ProductAddCommand command, CancellationToken cancellationToken)
