@@ -5,6 +5,8 @@ VisualStudioVersion = 17.12.35527.113 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchOrnegi.WebAPI", "OnionArchOrnegi.WebAPI\OnionArchOrnegi.WebAPI.csproj", "{5E2DD496-597C-4937-BDE4-49771E3AEFEF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchOrnegi.Application", "OnionArchOrnegi.Application\OnionArchOrnegi.Application.csproj", "{FCF68E11-C067-45B6-AAC3-B29D0BE95DDC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5E2DD496-597C-4937-BDE4-49771E3AEFEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E2DD496-597C-4937-BDE4-49771E3AEFEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E2DD496-597C-4937-BDE4-49771E3AEFEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCF68E11-C067-45B6-AAC3-B29D0BE95DDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCF68E11-C067-45B6-AAC3-B29D0BE95DDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCF68E11-C067-45B6-AAC3-B29D0BE95DDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCF68E11-C067-45B6-AAC3-B29D0BE95DDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
