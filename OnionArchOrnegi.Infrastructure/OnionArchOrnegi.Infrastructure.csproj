@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\OnionArchOrnegi.Application\OnionArchOrnegi.Application.csproj" />
+    <ProjectReference Include="..\OnionArchOrnegi.SharedLibrary\OnionArchOrnegi.SharedLibrary.csproj" />
+  </ItemGroup>
+
 </Project>

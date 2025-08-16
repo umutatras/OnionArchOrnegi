@@ -11,4 +11,9 @@
     <Folder Include="Interfaces\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\OnionArchOrnegi.Domain\OnionArchOrnegi.Domain.csproj" />
+    <ProjectReference Include="..\OnionArchOrnegi.SharedLibrary\OnionArchOrnegi.SharedLibrary.csproj" />
+  </ItemGroup>
+
 </Project>
