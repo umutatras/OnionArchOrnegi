@@ -11,10 +11,13 @@ public sealed class ProductUpdateCommandHandler : IRequestHandler<ProductUpdateC
 {
     private readonly IUnitOfWork _unitOfWork;
     private readonly ICurrentUserService _currentUserService;
-    public ProductUpdateCommandHandler(IUnitOfWork uow, ICurrentUserService currentUserService)
+    private readonly ICacheService _cache;
+
+    public ProductUpdateCommandHandler(IUnitOfWork uow, ICurrentUserService currentUserService, ICacheService cache)
     {
         _unitOfWork = uow;
         _currentUserService = currentUserService;
+        _cache = cache;
     }
 
     public async Task<ResponseDto<bool>> Handle(ProductUpdateCommand request, CancellationToken cancellationToken)
@@ -29,7 +32,8 @@ public sealed class ProductUpdateCommandHandler : IRequestHandler<ProductUpdateC
         product.ModifiedByUserId = _currentUserService.UserId;
         product.ModifiedOn = DateTime.UtcNow;
         int islemSonucu =await  _unitOfWork.SaveChangesAsync();
-
+        await _cache.RemoveAsync($"product:{product.Id}");
+        await _cache.RemoveAsync("products:all");
         if (islemSonucu > 0)
         {
             return new ResponseDto<bool>(true, "Product update successfully");

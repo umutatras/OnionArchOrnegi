@@ -7,9 +7,12 @@ namespace OnionArchOrnegi.Application.Product.Commands.Delete;
 public sealed class ProductDeleteCommandHandler : IRequestHandler<ProductDeleteCommand, ResponseDto<bool>>
 {
     private readonly IUnitOfWork _unitOfWork;
-    public ProductDeleteCommandHandler(IUnitOfWork uow)
+    private readonly ICacheService _cache;
+
+    public ProductDeleteCommandHandler(IUnitOfWork uow, ICacheService cache)
     {
         _unitOfWork = uow;
+        _cache = cache;
     }
 
     public async Task<ResponseDto<bool>> Handle(ProductDeleteCommand request, CancellationToken cancellationToken)
@@ -22,7 +25,8 @@ public sealed class ProductDeleteCommandHandler : IRequestHandler<ProductDeleteC
         }
         _unitOfWork.GetRepository<OnionArchOrnegi.Domain.Entities.Product>().Remove(product);
         int islemSonucu = await _unitOfWork.SaveChangesAsync();
-
+        await _cache.RemoveAsync($"product:{product.Id}");
+        await _cache.RemoveAsync("products:all");
         if (islemSonucu > 0)
         {
             return new ResponseDto<bool>(true, "product delete successfully");

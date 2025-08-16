@@ -10,10 +10,13 @@ public sealed class ProductCommandHandler : IRequestHandler<ProductAddCommand, R
 {
     private readonly IUnitOfWork _unitOfWork;
     private readonly ICurrentUserService _currentUserService;
-    public ProductCommandHandler(IUnitOfWork uow, ICurrentUserService currentUserService)
+    private readonly ICacheService _cacheService;
+
+    public ProductCommandHandler(IUnitOfWork uow, ICurrentUserService currentUserService, ICacheService cacheService)
     {
         _unitOfWork = uow;
         _currentUserService = currentUserService;
+        _cacheService = cacheService;
     }
 
     public async Task<ResponseDto<bool>> Handle(ProductAddCommand request, CancellationToken cancellationToken)
@@ -24,7 +27,8 @@ public sealed class ProductCommandHandler : IRequestHandler<ProductAddCommand, R
         var productRepository = _unitOfWork.GetRepository<OnionArchOrnegi.Domain.Entities.Product>();
         await productRepository.AddAsync(product);
         int islemSonucu = await _unitOfWork.SaveChangesAsync();
-
+        // Cache Invalidation
+        await _cacheService.RemoveAsync("products:all");
         if (islemSonucu > 0)
         {
             return new ResponseDto<bool>(true, "product added successfully");
