@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using OnionArchOrnegi.Domain.Entities;
 
-namespace OnionArchOrnegi.Persistance.Configurations
+namespace OnionArchOrnegi.Persistence.Configurations
 {
     public sealed class RefreshTokenConfiguration : IEntityTypeConfiguration<RefreshToken>
     {

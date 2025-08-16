@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using OnionArchOrnegi.Domain.Entities;
 using OnionArchOrnegi.Domain.Identity;
 
-namespace OnionArchOrnegi.Persistance.Configurations;
+namespace OnionArchOrnegi.Persistence.Configurations;
 
 public sealed class UserConfiguration : IEntityTypeConfiguration<AppUser>
 {
@@ -48,7 +48,7 @@ public sealed class UserConfiguration : IEntityTypeConfiguration<AppUser>
         builder.Property(x => x.CreatedOn).IsRequired();
 
         builder.Property(user => user.CreatedByUserId)
-            .IsRequired();
+            .IsRequired(false);
 
         builder.Property(user => user.ModifiedOn)
             .IsRequired(false);

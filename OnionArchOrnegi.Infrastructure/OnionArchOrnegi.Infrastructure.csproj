@@ -11,4 +11,12 @@
     <ProjectReference Include="..\OnionArchOrnegi.SharedLibrary\OnionArchOrnegi.SharedLibrary.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.14.0" />
+  </ItemGroup>
+
 </Project>

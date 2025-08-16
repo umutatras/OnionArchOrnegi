@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using OnionArchOrnegi.Application.Interfaces;
 using OnionArchOrnegi.Domain.Identity;
 using OnionArchOrnegi.Domain.Settings;
 using OnionArchOrnegi.Persistence.Contexts;
@@ -31,7 +32,7 @@ public static class DependencyInjection
         .AddEntityFrameworkStores<OnionArchOrnegiDbContext>()
         .AddDefaultTokenProviders();
 
-
+        services.AddScoped<IUnitOfWork, OnionArchOrnegi.Persistence.UnitOfWork.UnitOfWork>();
         return services;
     }
 }

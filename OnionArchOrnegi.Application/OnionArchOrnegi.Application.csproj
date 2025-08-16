@@ -17,4 +17,9 @@
     <ProjectReference Include="..\OnionArchOrnegi.SharedLibrary\OnionArchOrnegi.SharedLibrary.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\Auth\Commands\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+
 </Project>

@@ -170,7 +170,6 @@ namespace OnionArchOrnegi.Persistence.Migrations
                         .HasColumnType("text");
 
                     b.Property<int?>("CreatedByUserId")
-                        .IsRequired()
                         .HasColumnType("integer");
 
                     b.Property<DateTimeOffset>("CreatedOn")
@@ -243,6 +242,28 @@ namespace OnionArchOrnegi.Persistence.Migrations
                         .HasDatabaseName("UserNameIndex");
 
                     b.ToTable("Users", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "9b621cca-3ea3-4705-ac61-47f500fb1115",
+                            CreatedByUserId = 1,
+                            CreatedOn = new DateTimeOffset(new DateTime(2025, 3, 11, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 3, 0, 0, 0)),
+                            Email = "umut@gmail.com",
+                            EmailConfirmed = true,
+                            FirstName = "Umut",
+                            LastName = "Atraş",
+                            LockoutEnabled = false,
+                            NormalizedEmail = "UMUT@GMAIL.COM",
+                            NormalizedUserName = "UMUT",
+                            PasswordHash = "AQAAAAIAAYagAAAAEA+KBn4JcCAvbcq2YfvdH2KzJCS83TPdGmym5iSf+BbLaMNsiSX1sbu4IzrOwsypxQ==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "f1e46361-f61a-4f28-af29-1b52dbac3db4",
+                            TwoFactorEnabled = false,
+                            UserName = "umut"
+                        });
                 });
 
             modelBuilder.Entity("OnionArchOrnegi.Domain.Identity.AppUserClaim", b =>
