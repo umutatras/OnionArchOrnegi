@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchOrnegi.WebAPI", "O
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchOrnegi.Application", "OnionArchOrnegi.Application\OnionArchOrnegi.Application.csproj", "{FCF68E11-C067-45B6-AAC3-B29D0BE95DDC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchOrnegi.Domain", "OnionArchOrnegi.Domain\OnionArchOrnegi.Domain.csproj", "{0B2DEB38-57B9-4B2D-A139-F338017D9C6E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FCF68E11-C067-45B6-AAC3-B29D0BE95DDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCF68E11-C067-45B6-AAC3-B29D0BE95DDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCF68E11-C067-45B6-AAC3-B29D0BE95DDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B2DEB38-57B9-4B2D-A139-F338017D9C6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B2DEB38-57B9-4B2D-A139-F338017D9C6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B2DEB38-57B9-4B2D-A139-F338017D9C6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B2DEB38-57B9-4B2D-A139-F338017D9C6E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
