@@ -19,6 +19,8 @@
 
   <ItemGroup>
     <Folder Include="Features\Auth\Commands\" />
+    <Folder Include="Features\Product\Queries\GetAll\" />
+    <Folder Include="Features\Product\Queries\GetById\" />
     <Folder Include="Models\" />
   </ItemGroup>
 
