@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchOrnegi.Persistence
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchOrnegi.SharedLibrary", "OnionArchOrnegi.SharedLibrary\OnionArchOrnegi.SharedLibrary.csproj", "{F94C22BA-4D09-4EDA-8225-A1A62F6DD750}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchOrnegi.Infrastructure", "OnionArchOrnegi.Infrastructure\OnionArchOrnegi.Infrastructure.csproj", "{FCA280AD-70C6-4D65-A082-4BA63140C42B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{F94C22BA-4D09-4EDA-8225-A1A62F6DD750}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F94C22BA-4D09-4EDA-8225-A1A62F6DD750}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F94C22BA-4D09-4EDA-8225-A1A62F6DD750}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCA280AD-70C6-4D65-A082-4BA63140C42B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCA280AD-70C6-4D65-A082-4BA63140C42B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCA280AD-70C6-4D65-A082-4BA63140C42B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCA280AD-70C6-4D65-A082-4BA63140C42B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
