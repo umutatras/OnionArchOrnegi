@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchOrnegi.Application
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchOrnegi.Domain", "OnionArchOrnegi.Domain\OnionArchOrnegi.Domain.csproj", "{0B2DEB38-57B9-4B2D-A139-F338017D9C6E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchOrnegi.Persistence", "OnionArchOrnegi.Persistence\OnionArchOrnegi.Persistence.csproj", "{6B87CD83-5E71-4EC9-ABFA-612344AB432D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchOrnegi.SharedLibrary", "OnionArchOrnegi.SharedLibrary\OnionArchOrnegi.SharedLibrary.csproj", "{F94C22BA-4D09-4EDA-8225-A1A62F6DD750}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{0B2DEB38-57B9-4B2D-A139-F338017D9C6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B2DEB38-57B9-4B2D-A139-F338017D9C6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B2DEB38-57B9-4B2D-A139-F338017D9C6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B87CD83-5E71-4EC9-ABFA-612344AB432D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B87CD83-5E71-4EC9-ABFA-612344AB432D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B87CD83-5E71-4EC9-ABFA-612344AB432D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B87CD83-5E71-4EC9-ABFA-612344AB432D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F94C22BA-4D09-4EDA-8225-A1A62F6DD750}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F94C22BA-4D09-4EDA-8225-A1A62F6DD750}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F94C22BA-4D09-4EDA-8225-A1A62F6DD750}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F94C22BA-4D09-4EDA-8225-A1A62F6DD750}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
